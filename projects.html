@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <!-- SEO & METADATA -->
+    <meta name="description" content="Explore software engineering projects, web applications, Telegram mini apps, and banking network infrastructure developed by Yaikob Tesgera.">
+    <meta name="keywords" content="Yaikob Tesgera Projects, Full-Stack Developer Portfolio, Jabaa Enterprise, Telegram Mini App, IT Support Ethiopia">
+    <meta name="author" content="Yaikob Tesgera">
+    <meta name="robots" content="index, follow">
+
+    <!-- SECURITY HEADERS & CSP -->
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self' https://fonts.googleapis.com https://fonts.gstatic.com https://cdnjs.cloudflare.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdnjs.cloudflare.com; script-src 'self' 'unsafe-inline'; img-src 'self' data: https:;">
+
+    <title>Projects | Yaikob Tesgera</title>
+
+    <!-- FAVICON & ASSETS -->
+    <link rel="icon" type="image/png" href="assets/favicon.png">
+    <link rel="apple-touch-icon" href="assets/favicon.png">
+
+    <!-- PERFORMANCE: PRECONNECT & PRELOAD -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;700&display=swap" media="print" onload="this.media='all'">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" media="print" onload="this.media='all'">
+
+    <!-- STYLESHEETS -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- FUTURISTIC COLOR ACCENT STYLES -->
+    <style>
+        :root {
+            --transition-speed: 0.3s;
+        }
+        .color-cyan { background: linear-gradient(135deg, #00f2fe 0%, #4facfe 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; font-weight: 800; }
+        .color-purple { background: linear-gradient(135deg, #b827fc 0%, #2c1654 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; font-weight: 800; }
+        .color-pink { background: linear-gradient(135deg, #ff0844 0%, #ffb199 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; font-weight: 800; }
+        .color-gold { background: linear-gradient(135deg, #f6d365 0%, #fda085 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; font-weight: 800; }
+        .color-emerald { background: linear-gradient(135deg, #0ba360 0%, #3cba92 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; font-weight: 800; }
+        
+        /* LOGO AVATAR STYLING */
+        .logo-img-wrapper {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            text-decoration: none;
+        }
+        .logo-avatar {
+            width: 42px;
+            height: 42px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 2px solid #00f2fe;
+            box-shadow: 0 0 10px rgba(0, 242, 254, 0.5);
+            transition: transform var(--transition-speed) ease;
+        }
+        .logo-img-wrapper:hover .logo-avatar {
+            transform: scale(1.08) rotate(5deg);
+        }
+        .logo-text {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 1.2rem;
+            font-weight: 800;
+            letter-spacing: 0.5px;
+        }
+
+        /* FEATURED CARD CUSTOM STYLING */
+        .featured-card {
+            border: 1px solid rgba(0, 242, 254, 0.4) !important;
+            box-shadow: 0 0 25px rgba(0, 242, 254, 0.15) !important;
+            transition: var(--transition, transform 0.3s ease, box-shadow 0.3s ease);
+        }
+        .featured-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 0 35px rgba(0, 242, 254, 0.3) !important;
+        }
+        .project-icon-wrapper {
+            width: 50px;
+            height: 50px;
+            border-radius: 12px;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+        .floating-quick-chat {
+            position: fixed;
+            bottom: 25px;
+            right: 25px;
+            z-index: 999;
+            background: linear-gradient(135deg, #00f2fe 0%, #4facfe 100%);
+            color: #0f172a;
+            width: 55px;
+            height: 55px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.4rem;
+            box-shadow: 0 4px 20px rgba(0, 242, 254, 0.4);
+            transition: transform var(--transition-speed) ease, box-shadow var(--transition-speed) ease;
+            text-decoration: none;
+        }
+        .floating-quick-chat:hover {
+            transform: scale(1.1) translateY(-3px);
+            box-shadow: 0 6px 25px rgba(0, 242, 254, 0.7);
+        }
+    </style>
+</head>
+<body>
+
+<!-- ================= PRELOADER ================= -->
+<div class="preloader" role="status" aria-label="Loading page content">
+    <div class="loader"></div>
+</div>
+
+<!-- ================= HEADER ================= -->
+<header class="header" role="banner">
+    <a href="index.html" class="logo-img-wrapper" aria-label="Yaikob Tesgera Home">
+        <img src="images/profile-3.png" alt="Yaikob Tesgera" class="logo-avatar" width="42" height="42" loading="eager">
+        <span class="logo-text"><span class="color-cyan">YAIKOB</span> <span class="color-purple">TESGERA</span></span>
+    </a>
+
+    <nav class="navbar" role="navigation" aria-label="Main Navigation">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="projects.html" class="active" aria-current="page">Projects</a>
+        <a href="services.html">Services</a>
+        <a href="jabaa-company/index.html"><i class="fas fa-building color-gold" aria-hidden="true"></i> <span class="color-gold">Jabaa Enterprise</span></a>
+        <a href="contact.html">Contact</a>
+    </nav>
+
+    <div class="header-actions">
+        <!-- Theme Dropdown Select -->
+        <div class="theme-select-wrapper">
+            <label for="theme-select" class="sr-only">Select Theme Mode</label>
+            <i class="fas fa-palette theme-icon" aria-hidden="true"></i>
+            <select id="theme-select" name="theme-select" aria-label="Select Theme">
+                <option value="dark">🌙 Dark</option>
+                <option value="light">☀️ Light</option>
+                <option value="other">⚡ Cyber / Other</option>
+            </select>
+        </div>
+
+        <button class="menu-toggle" id="menu-toggle" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="navbar">
+            <i class="fas fa-bars" aria-hidden="true"></i>
+        </button>
+    </div>
+</header>
+
+<main id="main-content" role="main">
+
+<!-- ================= PAGE HEADER ================= -->
+<section class="page-header" style="text-align: center; padding-top: 130px; padding-bottom: 20px;" aria-label="Page Header">
+    <p class="color-cyan" style="font-weight: 800; letter-spacing: 2px;">MY WORK</p>
+    <h1 style="font-size: 2.8rem; font-weight: 800;">My <span class="color-purple">Projects</span></h1>
+    <p style="color: var(--text-muted); max-width: 600px; margin: 10px auto 0;">Explore enterprise platforms, full-stack web applications, mobile tools, and network configurations.</p>
+</section>
+
+<!-- ================= PROJECTS SECTION ================= -->
+<section class="section" aria-label="Projects Portfolio">
+    <!-- FILTER BUTTONS -->
+    <div class="filter-buttons" role="group" aria-label="Project Categories" style="display: flex; justify-content: center; gap: 10px; flex-wrap: wrap; margin-bottom: 40px;">
+        <button class="filter-btn active" data-filter="all" role="button">All</button>
+        <button class="filter-btn" data-filter="enterprise" role="button">Enterprise</button>
+        <button class="filter-btn" data-filter="web" role="button">Web</button>
+        <button class="filter-btn" data-filter="mobile" role="button">Mobile / Mini App</button>
+        <button class="filter-btn" data-filter="network" role="button">Networking</button>
+    </div>
+
+    <!-- PROJECTS GRID -->
+    <div class="projects-grid">
+
+        <!-- FLAGSHIP CONNECTED PROJECT: JABAA ENTERPRISE -->
+        <article class="project-card project-item featured-card" data-category="enterprise web mobile">
+            <div class="project-icon-wrapper" aria-hidden="true">
+                <i class="fas fa-building-user color-cyan"></i>
+            </div>
+            <div class="project-content">
+                <span class="project-category color-cyan" style="font-weight: 800; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 1px;">Featured Enterprise Platform</span>
+                <h3 style="font-size: 1.4rem; margin: 8px 0 10px;">Jabaa Enterprise & Tech Solutions</h3>
+                <p style="color: var(--text-muted); font-size: 0.9rem;">Complete dark glassmorphic portal featuring an interactive cost estimator, banking IT support showcase, and digital media hub.</p>
+                
+                <div class="project-tags" style="display: flex; gap: 8px; flex-wrap: wrap; margin: 15px 0;">
+                    <span style="background: rgba(0, 242, 254, 0.1); color: #00f2fe; padding: 4px 10px; border-radius: 20px; font-size: 0.75rem; border: 1px solid rgba(0, 242, 254, 0.3);">Glassmorphism</span>
+                    <span style="background: rgba(184, 39, 252, 0.1); color: #b827fc; padding: 4px 10px; border-radius: 20px; font-size: 0.75rem; border: 1px solid rgba(184, 39, 252, 0.3);">JavaScript</span>
+                    <span style="background: rgba(246, 211, 101, 0.1); color: #f6d365; padding: 4px 10px; border-radius: 20px; font-size: 0.75rem; border: 1px solid rgba(246, 211, 101, 0.3);">IT Systems</span>
+                </div>
+                
+                <div style="margin-top: 1.2rem;">
+                    <a href="jabaa-company/index.html" class="btn primary-btn" style="font-size: 0.85rem; padding: 0.6rem 1.2rem; display: inline-flex; align-items: center; gap: 8px;">
+                        Visit Jabaa Website <i class="fas fa-external-link-alt" aria-hidden="true"></i>
+                    </a>
+                </div>
+            </div>
+        </article>
+
+        <!-- PROJECT 2: BLOOD BANK -->
+        <article class="project-card project-item" data-category="web">
+            <div class="project-icon-wrapper" aria-hidden="true">
+                <i class="fas fa-hospital color-pink"></i>
+            </div>
+            <div class="project-content">
+                <span class="project-category color-pink" style="font-weight: 800; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 1px;">Web Application</span>
+                <h3 style="font-size: 1.3rem; margin: 8px 0 10px;">Jinka Blood Bank Service</h3>
+                <p style="color: var(--text-muted); font-size: 0.9rem;">Web portal managing blood donor databases, inventory matching, and hospital request processing systems.</p>
+                
+                <div class="project-tags" style="display: flex; gap: 8px; flex-wrap: wrap; margin: 15px 0;">
+                    <span style="background: rgba(255, 8, 68, 0.1); color: #ff0844; padding: 4px 10px; border-radius: 20px; font-size: 0.75rem; border: 1px solid rgba(255, 8, 68, 0.3);">PHP</span>
+                    <span style="background: rgba(184, 39, 252, 0.1); color: #b827fc; padding: 4px 10px; border-radius: 20px; font-size: 0.75rem; border: 1px solid rgba(184, 39, 252, 0.3);">MySQL</span>
+                    <span style="background: rgba(0, 242, 254, 0.1); color: #00f2fe; padding: 4px 10px; border-radius: 20px; font-size: 0.75rem; border: 1px solid rgba(0, 242, 254, 0.3);">JavaScript</span>
+                </div>
+            </div>
+        </article>
+
+        <!-- PROJECT 3: TELEGRAM MINI APP -->
+        <article class="project-card project-item" data-category="mobile">
+            <div class="project-icon-wrapper" aria-hidden="true">
+                <i class="fab fa-telegram color-emerald"></i>
+            </div>
+            <div class="project-content">
+                <span class="project-category color-emerald" style="font-weight: 800; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 1px;">Telegram Mini App</span>
+                <h3 style="font-size: 1.3rem; margin: 8px 0 10px;">Staff Financial Tracker</h3>
+                <p style="color: var(--text-muted); font-size: 0.9rem;">Automated contribution tracking and financial reporting mini-app built for mobile-first workplace management.</p>
+                
+                <div class="project-tags" style="display: flex; gap: 8px; flex-wrap: wrap; margin: 15px 0;">
+                    <span style="background: rgba(11, 163, 96, 0.1); color: #0ba360; padding: 4px 10px; border-radius: 20px; font-size: 0.75rem; border: 1px solid rgba(11, 163, 96, 0.3);">JavaScript</span>
+                    <span style="background: rgba(246, 211, 101, 0.1); color: #f6d365; padding: 4px 10px; border-radius: 20px; font-size: 0.75rem; border: 1px solid rgba(246, 211, 101, 0.3);">HTML5</span>
+                    <span style="background: rgba(0, 242, 254, 0.1); color: #00f2fe; padding: 4px 10px; border-radius: 20px; font-size: 0.75rem; border: 1px solid rgba(0, 242, 254, 0.3);">Termux CLI</span>
+                </div>
+            </div>
+        </article>
+
+        <!-- PROJECT 4: NETWORK INFRASTRUCTURE -->
+        <article class="project-card project-item" data-category="network">
+            <div class="project-icon-wrapper" aria-hidden="true">
+                <i class="fas fa-network-wired color-gold"></i>
+            </div>
+            <div class="project-content">
+                <span class="project-category color-gold" style="font-weight: 800; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 1px;">Networking & IT Support</span>
+                <h3 style="font-size: 1.3rem; margin: 8px 0 10px;">Banking Network Infrastructure</h3>
+                <p style="color: var(--text-muted); font-size: 0.9rem;">Structured Ethernet cabling, Cisco switch/router configuration, LAN topology design, and local security policy implementation.</p>
+                
+                <div class="project-tags" style="display: flex; gap: 8px; flex-wrap: wrap; margin: 15px 0;">
+                    <span style="background: rgba(246, 211, 101, 0.1); color: #f6d365; padding: 4px 10px; border-radius: 20px; font-size: 0.75rem; border: 1px solid rgba(246, 211, 101, 0.3);">Cisco</span>
+                    <span style="background: rgba(0, 242, 254, 0.1); color: #00f2fe; padding: 4px 10px; border-radius: 20px; font-size: 0.75rem; border: 1px solid rgba(0, 242, 254, 0.3);">TCP/IP</span>
+                    <span style="background: rgba(184, 39, 252, 0.1); color: #b827fc; padding: 4px 10px; border-radius: 20px; font-size: 0.75rem; border: 1px solid rgba(184, 39, 252, 0.3);">LAN Security</span>
+                </div>
+            </div>
+        </article>
+
+    </div>
+</section>
+
+</main>
+
+<!-- ================= FOOTER ================= -->
+<footer class="footer" role="contentinfo">
+    <div class="footer-grid">
+        <div>
+            <a href="index.html" class="logo-img-wrapper" style="margin-bottom: 1rem;" aria-label="Yaikob Tesgera Footer Logo">
+                <img src="images/profile-3.png" alt="Yaikob Tesgera" class="logo-avatar" width="42" height="42" loading="lazy">
+                <span class="logo-text"><span class="color-cyan">YAIKOB</span> <span class="color-purple">TESGERA</span></span>
+            </a>
+            <p>Computer Science Specialist engineering high-performance software and network solutions.</p>
+        </div>
+
+        <div>
+            <h3>Quick Links</h3>
+            <nav aria-label="Footer Navigation">
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="projects.html">Projects</a>
+                <a href="services.html">Services</a>
+                <a href="jabaa-company/index.html"><span class="color-gold">Jabaa Enterprise</span></a>
+                <a href="contact.html">Contact</a>
+            </nav>
+        </div>
+
+        <div>
+            <h3>Direct Contact</h3>
+            <p>
+                <i class="fas fa-envelope color-cyan" aria-hidden="true"></i>
+                <a href="mailto:yaikobtesgera0@gmail.com" style="color: inherit; text-decoration: none;">yaikobtesgera0@gmail.com</a>
+            </p>
+            <p>
+                <i class="fas fa-phone color-emerald" aria-hidden="true"></i>
+                <a href="tel:+251917345202" style="color: inherit; text-decoration: none;">+251917345202</a>
+            </p>
+            <p>
+                <i class="fab fa-telegram color-cyan" aria-hidden="true"></i>
+                <a href="https://t.me/jabaakeessan" target="_blank" rel="noopener noreferrer" style="color: inherit; text-decoration: none;">@jabaakeessan</a>
+            </p>
+        </div>
+    </div>
+
+    <div class="copyright">
+        <p>&copy; <span id="year"></span> <span class="color-cyan">Yaikob Tesgera</span>. All Rights Reserved.</p>
+    </div>
+</footer>
+
+<!-- FLOATING QUICK CHAT WIDGET -->
+<a href="https://t.me/jabaakeessan" target="_blank" rel="noopener noreferrer" class="floating-quick-chat" aria-label="Quick Telegram Chat">
+    <i class="fab fa-telegram-plane" aria-hidden="true"></i>
+</a>
+
+<!-- BACK TO TOP BUTTON -->
+<button id="back-to-top" aria-label="Scroll back to top of page" aria-hidden="true">
+    <i class="fas fa-arrow-up" aria-hidden="true"></i>
+</button>
+
+<!-- SCRIPT MODULE -->
+<script src="js/script.js" defer></script>
+</body>
+</html>

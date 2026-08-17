@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Love & Family Sanctuary</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/family.css">
+    <!-- EmailJS SDK -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script type="text/javascript">
+       (function(){
+          emailjs.init("5EInSEbKF57IddxHf");
+       })();
+    </script>
+</head>
+<body>
+
+    <!-- Header / Navigation -->
+    <header class="header">
+        <a href="index.html" class="logo"><i class="fas fa-heart logo-heart"></i> Maatii Keenya</a>
+
+        <nav class="navbar" id="navbar">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="services.html">Services</a>
+            <a href="contact.html">Contact</a>
+            <a href="jabaa-company/index.html"><i class="fas fa-building color-gold"></i> <span class="color-gold">Jabaa Enterprise</span></a>
+            <a href="family.html" class="active">Family</a>
+        </nav>
+
+        <div class="header-actions">
+            <div class="theme-select-wrapper">
+                <i class="fas fa-palette theme-icon"></i>
+                <select id="theme-select" aria-label="Select Theme">
+                    <option value="dark">🌙 Dark</option>
+                    <option value="light">☀️ Light</option>
+                    <option value="other">⚡ Cyber</option>
+                </select>
+            </div>
+
+            <button class="menu-toggle" id="menu-toggle" aria-label="Toggle menu">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- LOGIN SECTION (Shown when locked) -->
+    <section id="family-login-section" class="family-login-section">
+        <div class="login-card love-card-glow">
+            <div class="heart-pulse-icon">
+                <i class="fas fa-heart-lock"></i>
+            </div>
+            <h2>Sanctuary Of Love</h2>
+            <p class="love-subtitle-or">Seensa Maatii Keenyaa • Protected Family Portal</p>
+            
+            <!-- Step 1: Username & Password Form -->
+            <form id="family-login-form">
+                <p class="login-prompt-text">Enter credentials to unlock our precious memories.</p>
+                <div class="form-group">
+                    <label for="username"><i class="fas fa-user-heart"></i> Username</label>
+                    <input type="text" id="username" placeholder="Enter username" required>
+                </div>
+                <div class="form-group">
+                    <label for="password"><i class="fas fa-key"></i> Password</label>
+                    <input type="password" id="password" placeholder="Enter password" required>
+                </div>
+                <button type="submit" class="btn btn-primary btn-block btn-love">
+                    <i class="fas fa-paper-plane"></i> Send Email OTP Code
+                </button>
+                <div id="login-error" class="login-error"></div>
+            </form>
+
+            <!-- Step 2: Email OTP Verification Form (Hidden initially) -->
+            <form id="family-otp-form" style="display: none; margin-top: 1rem;">
+                <p class="login-prompt-text" style="color: var(--color-accent);">📧 4-digit code sent to your email inbox!</p>
+                <div class="form-group">
+                    <label for="otp-code"><i class="fas fa-shield-halved"></i> Enter 4-Digit Code</label>
+                    <input type="text" id="otp-code" placeholder="e.g. 1234" maxlength="4" required style="letter-spacing: 6px; text-align: center; font-size: 1.3rem;">
+                </div>
+                <button type="submit" class="btn btn-primary btn-block btn-love">
+                    <i class="fas fa-unlock"></i> Confirm & Unlock Sanctuary
+                </button>
+                <div style="margin-top: 1rem; text-align: center;">
+                    <button type="button" id="resend-otp-btn" style="background: none; border: none; color: var(--color-accent); cursor: pointer; text-decoration: underline; font-size: 0.9rem;">Resend Code</button>
+                </div>
+                <div id="otp-error" class="login-error"></div>
+            </form>
+        </div>
+    </section>
+
+    <!-- PROTECTED FAMILY CONTENT (Hidden until authenticated) -->
+    <main id="family-content" class="family-content" style="display: none;">
+        
+        <!-- Romantic Hero Header -->
+        <section class="family-hero">
+            <div class="container">
+                <div class="family-header-card romantic-hero-bg">
+                    <div class="logout-wrapper">
+                        <button id="logout-btn" class="btn btn-secondary btn-sm lock-btn">
+                            <i class="fas fa-lock"></i> Lock Sanctuary
+                        </button>
+                    </div>
+                    
+                    <span class="love-badge"><i class="fas fa-heart"></i> Jaalala BARA BARAA • Forever Love</span>
+                    <h1 class="family-main-title">Maatii Keenya & Jaalala Keenya</h1>
+                    <p class="family-subtitle-en">Two Hearts, One Soul, Building an Everlasting Legacy</p>
+
+                    <!-- Husband & Wife Profile Section with Static Crisp Photos -->
+                    <div class="family-couples-info">
+                        
+                        <!-- Husband Card -->
+                        <div class="profile-pill romantic-pill profile-card-with-photo">
+                            <div class="profile-photo-container">
+                                <img src="images/yaikob.png" alt="Yaikob Tesgera Tujuba">
+                            </div>
+                            <div class="profile-details">
+                                <small class="role-badge">Abbaa Manaa • Husband</small>
+                                <h3>Yaikob Tesgera Tujuba</h3>
+                                <span class="romantic-tag">Onnee Koo • My Heart</span>
+                            </div>
+                        </div>
+
+                        <!-- Animated Heart Connector -->
+                        <div class="heart-divider-pulse">
+                            <i class="fas fa-heart"></i>
+                            <span>Jaalala Dhugaa</span>
+                        </div>
+
+                        <!-- Wife Card -->
+                        <div class="profile-pill romantic-pill profile-card-with-photo">
+                            <div class="profile-photo-container">
+                                <img src="images/fedhi.jpg" alt="Fedhii Moti Ufgea">
+                            </div>
+                            <div class="profile-details">
+                                <small class="role-badge">Haadha Manaa • Wife</small>
+                                <h3>Fedhii Moti Ufgea</h3>
+                                <span class="romantic-tag">Jireenya Koo • My Life</span>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- AFAAN OROMOO LOVE & FAMILY VALUES SECTIONS -->
+        <section class="container family-values-section" style="margin: 3rem auto;">
+            <div class="values-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 2rem;">
+
+                <!-- 1. Waadaa Jaalala -->
+                <div class="love-quote-card" style="background: var(--bg-card); padding: 2rem; border-radius: 16px; border: 1px solid var(--border-color); box-shadow: 0 4px 20px rgba(0,0,0,0.1); position: relative; overflow: hidden;">
+                    <div style="font-size: 2.8rem; margin-bottom: 1rem;">❤️‍🔥</div>
+                    <h3 style="color: var(--color-accent); margin-bottom: 1rem; font-size: 1.3rem;">1. Waadaa Jaalala Badaa Hin Qabne</h3>
+                    <blockquote style="font-style: italic; color: var(--text-main); margin-bottom: 1rem; line-height: 1.6;">
+                        "Waadaan jaalala keenyaa har’a qofaaf miti; jireenya bara baraatiif. Walin taana, walin imalta, walin qabsoofna. Yoomiyyuu harka kee hin gadhiisu!"
+                    </blockquote>
+                    <p style="color: var(--text-muted); font-size: 0.95rem; line-height: 1.5;">
+                        Jaalalli dhugaa waadaa onnee irraa maddudha. Jalqaba irratti imala jaalalaa jalqabne, har’a ammoo abjuu keenya hunda walin dhugoomsaa jirra. Guyyaa hundumaa jaalalli keenya akka haaraatti haaroma, onneen keenya walitti hidhama. Ati koo, ani kankee—hanga dhumaatti walin jirra!
+                    </p>
+                </div>
+
+                <!-- 2. Gammachuu Fi Badhaadhina Maatii -->
+                <div class="love-quote-card" style="background: var(--bg-card); padding: 2rem; border-radius: 16px; border: 1px solid var(--border-color); box-shadow: 0 4px 20px rgba(0,0,0,0.1); position: relative; overflow: hidden;">
+                    <div style="font-size: 2.8rem; margin-bottom: 1rem;">💞</div>
+                    <h3 style="color: var(--color-accent); margin-bottom: 1rem; font-size: 1.3rem;">2. Gammachuu Fi Badhaadhina Maatii</h3>
+                    <blockquote style="font-style: italic; color: var(--text-main); margin-bottom: 1rem; line-height: 1.6;">
+                        "Gammachuun maatii keenyaa madaallii maleedha. Manni keenya bakka seeqaa, kolfafi gammachuun keessaa burqudha!"
+                    </blockquote>
+                    <p style="color: var(--text-muted); font-size: 0.95rem; line-height: 1.5;">
+                        Gammachuun maatii keessatti utubaa jabaadha. Wal-hubannoo, wal-kolfisiisuu fi walitti dhiheenya keenyaan manni keenya gammachuudhaan guutama. Suuraawwan fi yaadannowwan nuti walin uumru hundi qabeenya keenya isa Guddaadha. Gammachuun keenya har'aa boorif maddadha.
+                    </p>
+                </div>
+
+                <!-- 3. Jajjabina Fi Wal-deeggarsa -->
+                <div class="love-quote-card" style="background: var(--bg-card); padding: 2rem; border-radius: 16px; border: 1px solid var(--border-color); box-shadow: 0 4px 20px rgba(0,0,0,0.1); position: relative; overflow: hidden;">
+                    <div style="font-size: 2.8rem; margin-bottom: 1rem;">💖</div>
+                    <h3 style="color: var(--color-accent); margin-bottom: 1rem; font-size: 1.3rem;">3. Jajjabina Fi Wal-deeggarsa</h3>
+                    <blockquote style="font-style: italic; color: var(--text-main); margin-bottom: 1rem; line-height: 1.6;">
+                        "Qormaanni jireenyaa nutti dhufus, nuti gamtaadhaan dhaabbanna. Wallisaa fi wal-jajjabeessaa bakka yaadne hundumaa ni gessos!"
+                    </blockquote>
+                    <p style="color: var(--text-muted); font-size: 0.95rem; line-height: 1.5;">
+                        Jireenya keessatti guyyaan dukkanaa fi gaddaa dhufuu danda'a. Garuu maatii jabaa jechuun gaafa tokko kufu wal-qabanii kan ka'anidha. Nuti walitti aanu, wal-simachuu fi wal-gargaaruun qormaata jireenyaa hunda ni mo'anna. Humna keenya isa guddaan wal-jaallachuu keenya!
+                    </p>
+                </div>
+
+                <!-- 4. Abaabo Jaalalaa Fi Miidhagina -->
+                <div class="love-quote-card" style="background: var(--bg-card); padding: 2rem; border-radius: 16px; border: 1px solid var(--border-color); box-shadow: 0 4px 20px rgba(0,0,0,0.1); position: relative; overflow: hidden;">
+                    <div style="font-size: 2.8rem; margin-bottom: 1rem;">💗</div>
+                    <h3 style="color: var(--color-accent); margin-bottom: 1rem; font-size: 1.3rem;">4. Abaabo Jaalalaa Fi Miidhagina</h3>
+                    <blockquote style="font-style: italic; color: var(--text-main); margin-bottom: 1rem; line-height: 1.6;">
+                        "Abaabo bareedaan bakka hundatti daraara, jaalalli maatii keenyas akkasuma urgaa fi midhagina haarawa guyyaa hundumaa uuma!"
+                    </blockquote>
+                    <p style="color: var(--text-muted); font-size: 0.95rem; line-height: 1.5;">
+                        Jaalalli akka abaabo obsa fi kunuunsa dhiyeessu gaafata. Nuti wal-kunuunsuu, wal-kabajuu fi wal-jaallachuudhaan jaalala keenya bara baraan akka daraaru goona. Abaaboo midhaaguyyuu caalaa jaalalli keenya onnee keessatti urgaa fi bareeda.
+                    </p>
+                </div>
+
+                <!-- 5. Gorsa Jireenyaa Fi Eebba -->
+                <div class="love-quote-card" style="background: var(--bg-card); padding: 2rem; border-radius: 16px; border: 1px solid var(--border-color); box-shadow: 0 4px 20px rgba(0,0,0,0.1); position: relative; overflow: hidden;">
+                    <div style="font-size: 2.8rem; margin-bottom: 1rem;">💓</div>
+                    <h3 style="color: var(--color-accent); margin-bottom: 1rem; font-size: 1.3rem;">5. Gorsa Jireenyaa Fi Eebba</h3>
+                    <blockquote style="font-style: italic; color: var(--text-main); margin-bottom: 1rem; line-height: 1.6;">
+                        "Kabaja, amanamummaa fi wal-dhaggeeffachuun hundee maatii jabaati. Jaalalli iddoo jiru hundatti injifannoon ni jira!"
+                    </blockquote>
+                    <p style="color: var(--text-muted); font-size: 0.95rem; line-height: 1.5;">
+                        • <strong>Amanamummaa:</strong> Walitti dhiheenya fi amanamummaan bu'uura maatii jabaati.<br>
+                        • <strong>Kabaja:</strong> Mutually wal-kabajuun jireenya maatii mi'eessa.<br>
+                        • <strong>Dhiifama:</strong> Dhiifama walii gochuun boqonnaa fi nagaa onnee keenyaaf fida.<br>
+                        • <strong>Eebba:</strong> Maatiin wal-jaallatu bara baraan eebbifamaa fi milkaa'aadha!
+                    </p>
+                </div>
+
+                <!-- 6. Boruu Keenya Fi Ijoollee Keenya -->
+                <div class="love-quote-card" style="background: var(--bg-card); padding: 2rem; border-radius: 16px; border: 1px solid var(--border-color); box-shadow: 0 4px 20px rgba(0,0,0,0.1); position: relative; overflow: hidden;">
+                    <div style="font-size: 2.8rem; margin-bottom: 1rem;">💕</div>
+                    <h3 style="color: var(--color-accent); margin-bottom: 1rem; font-size: 1.3rem;">6. Boruu Keenya Fi Ijoollee Keenya</h3>
+                    <blockquote style="font-style: italic; color: var(--text-main); margin-bottom: 1rem; line-height: 1.6;">
+                        "Nuti har'a bu'uura jabaa ijaarra; ijoolleen keenya ammoo boruu ifaa fi milkaa'ina keenya guutuu ta'u!"
+                    </blockquote>
+                    <p style="color: var(--text-muted); font-size: 0.95rem; line-height: 1.5;">
+                        Abjuun maatii keenyaa bal'aadha. Ijoolleen keenya eebba, gammachuu fi abdii keenya isa guddaadha. Isaan faana jireenya ifaa fi fuuldura bareeda ijaarra. Boruu keenya jaalala fi milkaa'inaan kan guutameedha!
+                    </p>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- FUTURE CHILDREN SECTION -->
+        <section class="container future-children-section">
+            <div class="future-children-card">
+                <div class="children-header">
+                    <i class="fas fa-baby-carriage children-icon"></i>
+                    <div>
+                        <h2>Ijoollee Keenya Boruu • Our Future Children</h2>
+                        <p>Our future blessings and the future generations of the Tujuba family.</p>
+                    </div>
+                </div>
+
+                <div class="children-grid">
+                    <div class="child-card">
+                        <div class="child-avatar">
+                            <i class="fas fa-child"></i>
+                        </div>
+                        <div class="child-info">
+                            <span class="child-tag">First Blessing • Eebba Jalqabaa</span>
+                            <h3 contenteditable="true" class="editable-child-name">[Child 1 Name / Maqaa]</h3>
+                            <p contenteditable="true" class="editable-child-desc">Write your future wishes or birth dates here...</p>
+                        </div>
+                    </div>
+
+                    <div class="child-card">
+                        <div class="child-avatar">
+                            <i class="fas fa-child-reaching"></i>
+                        </div>
+                        <div class="child-info">
+                            <span class="child-tag">Second Blessing • Eebba Lammaffaa</span>
+                            <h3 contenteditable="true" class="editable-child-name">[Child 2 Name / Maqaa]</h3>
+                            <p contenteditable="true" class="editable-child-desc">Write your future wishes or birth dates here...</p>
+                        </div>
+                    </div>
+
+                    <div class="child-card add-child-card">
+                        <div class="child-avatar add-avatar">
+                            <i class="fas fa-heart-circle-plus"></i>
+                        </div>
+                        <div class="child-info">
+                            <span class="child-tag">Future Blessing • Eebba Boruu</span>
+                            <h3 contenteditable="true" class="editable-child-name">[Future Child Name]</h3>
+                            <p contenteditable="true" class="editable-child-desc">Click here to add dreams for your family growth.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Capture & Upload Section -->
+        <section class="container upload-section">
+            <div class="upload-card romantic-upload-card">
+                <div class="upload-title-block">
+                    <i class="fas fa-images"></i>
+                    <div>
+                        <h3>Kuusaa Suuraa • Our Photo Gallery</h3>
+                        <p>Capture new memories or upload photos to store them safely online.</p>
+                    </div>
+                </div>
+                <div class="upload-actions">
+                    <label for="image-input" class="btn btn-primary custom-file-upload btn-love">
+                        <i class="fas fa-cloud-upload-alt"></i> Upload Photos
+                    </label>
+                    <input type="file" id="image-input" accept="image/*" multiple style="display: none;">
+                    
+                    <label for="camera-input" class="btn btn-secondary custom-file-upload">
+                        <i class="fas fa-camera"></i> Capture Photo
+                    </label>
+                    <input type="file" id="camera-input" accept="image/*" capture="environment" style="display: none;">
+                </div>
+                <p class="photo-counter"><i class="fas fa-photo-film"></i> Total Photos: <span id="photo-count">0</span></p>
+            </div>
+        </section>
+
+        <!-- Gallery Grid -->
+        <section class="container">
+            <div id="family-gallery" class="gallery-grid">
+                <!-- Dynamic images injected via JavaScript -->
+            </div>
+        </section>
+
+    </main>
+
+    <!-- FULL-SCREEN TOUCH-SWIPE LIGHTBOX MODAL (NO ARROWS) -->
+    <div id="image-lightbox" class="lightbox-modal" style="display: none;">
+        <span id="lightbox-close" class="lightbox-close-btn">&times;</span>
+        <img id="lightbox-img" class="lightbox-content" alt="Full Screen Memory">
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; <span id="jabaa-year"></span> Yaikob Tesgera Tujuba & Family. Made with <i class="fas fa-heart" style="color: #ff007f;"></i></p>
+    </footer>
+
+    <!-- JavaScript with Touch/Mouse Swipe Support -->
+    <script src="js/script.js"></script>
+    <script src="js/family.js"></script>
+</body>
+</html>
