@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Jabaa Enterprise - Next-Generation Digital Solutions, Media Platform, AI Systems & Banking IT Support, featuring ISO/IEC 25010 Software Quality Standards.">
+    <title>Jabaa Enterprise | 12 Online Courses & Estimator</title>
+    <link rel="icon" href="assets/favicon.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- UNIQUE HIGH-TECH HEADER WITH LOGO & THEME CONTROLLER -->
+    <header class="header">
+        <a href="index.html" class="logo">
+            <img src="images/company-logo.jpg" alt="Jabaa Enterprise Logo" class="company-logo-img">
+            JABAA <span>ENTERPRISE</span>
+        </a>
+
+        <nav class="navbar" id="navbar">
+            <a href="#home" class="active"><i class="fas fa-house-chimney"></i> Home</a>
+            <a href="#matrix"><i class="fas fa-sitemap"></i> Enterprise Matrix</a>
+            <a href="#characteristics"><i class="fas fa-check-double"></i> Quality Standards</a>
+            <a href="#estimator"><i class="fas fa-graduation-cap"></i> Courses</a>
+            <a href="#contact"><i class="fas fa-envelope"></i> Contact</a>
+        </nav>
+
+        <div class="header-actions">
+            <!-- DYNAMIC THEME SWITCHER (DARK / LIGHT / DEVICE) -->
+            <div class="theme-wrapper">
+                <i class="fas fa-circle-half-stroke theme-icon"></i>
+                <select class="theme-selector" id="theme-select" onchange="changeTheme(this.value)">
+                    <option value="dark">🌙 Dark</option>
+                    <option value="light">☀️ Light</option>
+                    <option value="device">💻 Device</option>
+                </select>
+            </div>
+
+            <a href="../index.html" class="btn-nav-portfolio">
+                <i class="fas fa-user-code"></i> Portfolio
+            </a>
+            <a href="#contact" class="btn-nav-partner">
+                <i class="fas fa-handshake"></i> Partner Us
+            </a>
+            <button class="menu-toggle" id="menu-toggle" aria-label="Toggle navigation menu">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section class="hero section" id="home">
+        <div class="hero-bg-glow"></div>
+        <div class="hero-container">
+            <div class="hero-content">
+                <div class="badge">
+                    <img src="images/company-logo.jpg" alt="Logo Icon" class="badge-icon">
+                    <span>Pioneering Tech & Digital Enterprise</span>
+                </div>
+                <h1>Empowering Operations with <span>Enterprise IT & Skills Training</span></h1>
+                <p>
+                    Jabaa Enterprise delivers bank-grade IT support, secure network cabling, Telegram mini-app financial software, media growth, productivity strategies, and 12 industry-aligned online practical courses in Ethiopian Birr (ETB).
+                </p>
+
+                <div class="hero-buttons">
+                    <a href="#estimator" class="btn btn-primary">
+                        Browse 12 Courses & Pricing <i class="fas fa-arrow-right"></i>
+                    </a>
+                    <a href="../index.html" class="btn btn-outline">
+                        <i class="fas fa-briefcase"></i> View Founder Portfolio
+                    </a>
+                    <button onclick="openPortfolioModal()" class="btn btn-glass">
+                        <i class="fas fa-window-restore"></i> Live Preview
+                    </button>
+                </div>
+
+                <div class="trust-metrics">
+                    <div class="metric-item">
+                        <h3 class="counter" data-target="10000">10,000+</h3>
+                        <p>Community Reach</p>
+                    </div>
+                    <div class="metric-divider"></div>
+                    <div class="metric-item">
+                        <h3 class="counter" data-target="99">99.9%</h3>
+                        <p>System Uptime</p>
+                    </div>
+                    <div class="metric-divider"></div>
+                    <div class="metric-item">
+                        <h3 class="counter" data-target="12">12</h3>
+                        <p>Practical Courses</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="hero-visual">
+                <div class="glass-card main-card">
+                    <div class="card-header">
+                        <span class="dot red"></span>
+                        <span class="dot yellow"></span>
+                        <span class="dot green"></span>
+                        <span class="card-title">Jabaa Enterprise Hub v3.1</span>
+                    </div>
+                    <div class="code-preview">
+                        <code>
+                            <span class="keyword">const</span> <span class="variable">JabaaAcademy</span> = {<br>
+                            &nbsp;&nbsp;totalCourses: <span class="number">12</span>,<br>
+                            &nbsp;&nbsp;levels: [<span class="string">"Beginner"</span>, <span class="string">"Intermediate"</span>, <span class="string">"Advanced"</span>, <span class="string">"Master"</span>],<br>
+                            &nbsp;&nbsp;currency: <span class="string">"ETB"</span>,<br>
+                            &nbsp;&nbsp;telegramDirect: <span class="string">"@jabaakeessan"</span><br>
+                            };
+                        </code>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ENTERPRISE CAPABILITY MATRIX -->
+    <section class="section" id="matrix">
+        <div class="section-title">
+            <p>ENTERPRISE CAPABILITIES</p>
+            <h2>What Drives <span>Jabaa Enterprise</span></h2>
+        </div>
+        <div class="enterprise-matrix">
+            <div class="matrix-card">
+                <i class="fas fa-university icon-accent"></i>
+                <h3>1. Banking IT Infrastructure</h3>
+                <p>Workstation deployment, LAN cable structuring, terminal configurations, and daily technical operations maintenance.</p>
+            </div>
+            <div class="matrix-card">
+                <i class="fas fa-shield-halved icon-accent"></i>
+                <h3>2. Network Access & Security</h3>
+                <p>Cisco switch routing, authorized vulnerability assessments, firewall enforcement, and role-based permissions.</p>
+            </div>
+            <div class="matrix-card">
+                <i class="fab fa-telegram icon-accent"></i>
+                <h3>3. Telegram Mini App Trackers</h3>
+                <p>Building automated ledger software to calculate staff group contributions and deliver real-time financial statements.</p>
+            </div>
+            <div class="matrix-card">
+                <i class="fas fa-code icon-accent"></i>
+                <h3>4. Enterprise Web Applications</h3>
+                <p>Modern glassmorphic portals, data clearance platforms, medical blood bank management, and inventory tracking tools.</p>
+            </div>
+            <div class="matrix-card">
+                <i class="fab fa-youtube icon-accent"></i>
+                <h3>5. Jabaa Pioneer Digital Media</h3>
+                <p>Engaging thousands of online followers through storytelling, cultural fables, inspirational content, and tech education in Afaan Oromo.</p>
+            </div>
+            <div class="matrix-card">
+                <i class="fas fa-bullhorn icon-accent"></i>
+                <h3>6. Paid Ads & Performance Marketing</h3>
+                <p>Targeted digital advertising, ad spend optimization, conversion analytics, and cross-channel growth for social pages.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- SOFTWARE QUALITY CHARACTERISTICS (ISO/IEC 25010 Compliance) -->
+    <section class="section" id="characteristics">
+        <div class="section-title">
+            <p>ISO/IEC 25010 STANDARDS</p>
+            <h2>Software Quality <span>Characteristics</span></h2>
+        </div>
+        <div class="enterprise-matrix">
+            <div class="matrix-card">
+                <i class="fas fa-mobile-screen-button icon-accent"></i>
+                <h3>1. Responsive & Adaptive</h3>
+                <p>Fluid layouts optimized for desktops, tablets, mobile WebViews, and diverse screen resolutions.</p>
+            </div>
+            <div class="matrix-card">
+                <i class="fas fa-puzzle-piece icon-accent"></i>
+                <h3>2. Cross-Platform Compatibility</h3>
+                <p>Seamless execution across modern web browsers, operating systems, and Telegram Mini-App environments.</p>
+            </div>
+            <div class="matrix-card">
+                <i class="fas fa-user-check icon-accent"></i>
+                <h3>3. Usability & Accessibility</h3>
+                <p>Intuitive interface design, accessible ARIA landmarks, clear typography, and light/dark theme switching.</p>
+            </div>
+            <div class="matrix-card">
+                <i class="fas fa-gauge-high icon-accent"></i>
+                <h3>4. Performance Efficiency</h3>
+                <p>Lightweight DOM elements, sub-second calculation speeds, and optimized asset loading.</p>
+            </div>
+            <div class="matrix-card">
+                <i class="fas fa-shield-check icon-accent"></i>
+                <h3>5. Reliability & Security</h3>
+                <p>Robust input validation, fault-tolerant registration logic, and secure Telegram redirection protocols.</p>
+            </div>
+            <div class="matrix-card">
+                <i class="fas fa-cubes icon-accent"></i>
+                <h3>6. Maintainability & Portability</h3>
+                <p>Modular component structure, clean semantic code, and instant deployability across static servers.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 12 ONLINE COURSES ESTIMATOR & REGISTRATION SECTION -->
+    <section class="section" id="estimator">
+        <div class="section-title">
+            <p>DISCOUNTED SPECIAL PRICING</p>
+            <h2>12 Online Courses <span>Estimator & Registration</span></h2>
+        </div>
+
+        <div class="glass-card estimator-container">
+            <form id="course-estimator-form">
+                
+                <!-- 1. BEGINNER LEVEL (5 COURSES) -->
+                <div class="course-level-group">
+                    <div class="level-header">
+                        <span class="level-badge beginner-badge"><i class="fas fa-seedling"></i> Beginner Level (5 Courses)</span>
+                        <p>5 Fundamental Courses to start your career in technology, language, & personal productivity.</p>
+                    </div>
+                    <div class="course-grid">
+                        <label class="course-card selected" onclick="selectCourse(this)">
+                            <input type="radio" name="course_choice" value="Computer Fundamentals & IT Basics" data-price="1200" data-old-price="1600" checked>
+                            <i class="fas fa-desktop course-icon"></i>
+                            <h4>1. Computer Fundamentals & IT Basics</h4>
+                            <p>Hardware setup, OS navigation, basic troubleshooting, and office utilities.</p>
+                            <div class="course-price-container">
+                                <span class="old-price">1,600 ETB</span>
+                                <span class="new-price">1,200 ETB</span>
+                            </div>
+                        </label>
+
+                        <label class="course-card" onclick="selectCourse(this)">
+                            <input type="radio" name="course_choice" value="HTML, CSS & Web Foundations" data-price="1500" data-old-price="2000">
+                            <i class="fab fa-html5 course-icon"></i>
+                            <h4>2. HTML, CSS & Web Foundations</h4>
+                            <p>Build your very first responsive layout, landing pages, and glassmorphic designs.</p>
+                            <div class="course-price-container">
+                                <span class="old-price">2,000 ETB</span>
+                                <span class="new-price">1,500 ETB</span>
+                            </div>
+                        </label>
+
+                        <label class="course-card" onclick="selectCourse(this)">
+                            <input type="radio" name="course_choice" value="Workplace English Conversation" data-price="1500" data-old-price="2000">
+                            <i class="fas fa-comments course-icon"></i>
+                            <h4>3. Workplace English Speaking Practice</h4>
+                            <p>Practical oral dialogue practice, greetings, phone calls, and technical interviews.</p>
+                            <div class="course-price-container">
+                                <span class="old-price">2,000 ETB</span>
+                                <span class="new-price">1,500 ETB</span>
+                            </div>
+                        </label>
+
+                        <label class="course-card" onclick="selectCourse(this)">
+                            <input type="radio" name="course_choice" value="Intro to Python Scripting" data-price="1800" data-old-price="2400">
+                            <i class="fab fa-python course-icon"></i>
+                            <h4>4. Intro to Python & Task Automation</h4>
+                            <p>Variables, loops, file handling, and simple scripts to handle Excel/text files.</p>
+                            <div class="course-price-container">
+                                <span class="old-price">2,400 ETB</span>
+                                <span class="new-price">1,800 ETB</span>
+                            </div>
+                        </label>
+
+                        <!-- NEW COURSE 1: ADHD & FOCUS MANAGEMENT -->
+                        <label class="course-card" onclick="selectCourse(this)">
+                            <input type="radio" name="course_choice" value="ADHD & Focus Management Strategies" data-price="1200" data-old-price="1600">
+                            <i class="fas fa-brain course-icon"></i>
+                            <h4>5. ADHD & Focus Management Strategies</h4>
+                            <p>Practical time-blocking, focus techniques, task breakdown, and cognitive management for IT professionals.</p>
+                            <div class="course-price-container">
+                                <span class="old-price">1,600 ETB</span>
+                                <span class="new-price">1,200 ETB</span>
+                            </div>
+                        </label>
+                    </div>
+                </div>
+
+                <!-- 2. INTERMEDIATE LEVEL (4 COURSES) -->
+                <div class="course-level-group">
+                    <div class="level-header">
+                        <span class="level-badge medium-badge"><i class="fas fa-layer-group"></i> Intermediate Level (4 Courses)</span>
+                        <p>4 Practical skill-building courses for developers, technicians, & media creators.</p>
+                    </div>
+                    <div class="course-grid">
+                        <label class="course-card" onclick="selectCourse(this)">
+                            <input type="radio" name="course_choice" value="JavaScript & Interactive Web Development" data-price="2500" data-old-price="3300">
+                            <i class="fab fa-js course-icon"></i>
+                            <h4>6. JavaScript & Dynamic Web Apps</h4>
+                            <p>DOM manipulation, ES6 syntax, Async/Await, APIs, and interactive dashboards.</p>
+                            <div class="course-price-container">
+                                <span class="old-price">3,300 ETB</span>
+                                <span class="new-price">2,500 ETB</span>
+                            </div>
+                        </label>
+
+                        <label class="course-card" onclick="selectCourse(this)">
+                            <input type="radio" name="course_choice" value="Banking IT & Network Routing" data-price="2800" data-old-price="3700">
+                            <i class="fas fa-network-wired course-icon"></i>
+                            <h4>7. Banking IT Support & Cisco Networking</h4>
+                            <p>Cisco switch configuration, structured LAN cabling, IP subnetting, and Active Directory.</p>
+                            <div class="course-price-container">
+                                <span class="old-price">3,700 ETB</span>
+                                <span class="new-price">2,800 ETB</span>
+                            </div>
+                        </label>
+
+                        <label class="course-card" onclick="selectCourse(this)">
+                            <input type="radio" name="course_choice" value="Digital Media & Video Editing" data-price="2200" data-old-price="2900">
+                            <i class="fas fa-photo-film course-icon"></i>
+                            <h4>8. Digital Media & Content Editing</h4>
+                            <p>Video scripting, editing tools, thumbnail design, and YouTube/Telegram growth strategy.</p>
+                            <div class="course-price-container">
+                                <span class="old-price">2,900 ETB</span>
+                                <span class="new-price">2,200 ETB</span>
+                            </div>
+                        </label>
+
+                        <!-- NEW COURSE 2: DIGITAL ADS & MARKETING -->
+                        <label class="course-card" onclick="selectCourse(this)">
+                            <input type="radio" name="course_choice" value="Digital Ads & Audience Growth Strategy" data-price="1900" data-old-price="2500">
+                            <i class="fas fa-rectangle-ad course-icon"></i>
+                            <h4>9. Digital Ads & Audience Growth</h4>
+                            <p>Running paid campaigns (Meta, Telegram, YouTube Ads), target retargeting, and page conversion strategies.</p>
+                            <div class="course-price-container">
+                                <span class="old-price">2,500 ETB</span>
+                                <span class="new-price">1,900 ETB</span>
+                            </div>
+                        </label>
+                    </div>
+                </div>
+
+                <!-- 3. ADVANCED LEVEL (2 COURSES) -->
+                <div class="course-level-group">
+                    <div class="level-header">
+                        <span class="level-badge advanced-badge"><i class="fas fa-rocket"></i> Advanced Level (2 Courses)</span>
+                        <p>2 In-depth professional engineering & software development tracks.</p>
+                    </div>
+                    <div class="course-grid">
+                        <label class="course-card" onclick="selectCourse(this)">
+                            <input type="radio" name="course_choice" value="Full-Stack Web Engineering" data-price="3500" data-old-price="4600">
+                            <i class="fas fa-database course-icon"></i>
+                            <h4>10. Full-Stack Web Engineering & Databases</h4>
+                            <p>Front-end integration, Node.js backend APIs, MySQL databases, and live web hosting.</p>
+                            <div class="course-price-container">
+                                <span class="old-price">4,600 ETB</span>
+                                <span class="new-price">3,500 ETB</span>
+                            </div>
+                        </label>
+
+                        <label class="course-card" onclick="selectCourse(this)">
+                            <input type="radio" name="course_choice" value="Telegram Mini-Apps & Bot Ecosystems" data-price="3200" data-old-price="4200">
+                            <i class="fab fa-telegram course-icon"></i>
+                            <h4>11. Telegram Mini-Apps & Bot Ecosystems</h4>
+                            <p>Construct web apps inside Telegram, staff financial ledgers, and automated payment triggers.</p>
+                            <div class="course-price-container">
+                                <span class="old-price">4,200 ETB</span>
+                                <span class="new-price">3,200 ETB</span>
+                            </div>
+                        </label>
+                    </div>
+                </div>
+
+                <!-- 4. MASTER / EXPERT LEVEL (1 COURSE) -->
+                <div class="course-level-group">
+                    <div class="level-header">
+                        <span class="level-badge master-badge"><i class="fas fa-crown"></i> Master Level (1 Course)</span>
+                        <p>1 High-value specialized track for infrastructure auditing and security.</p>
+                    </div>
+                    <div class="course-grid master-grid">
+                        <label class="course-card" onclick="selectCourse(this)">
+                            <input type="radio" name="course_choice" value="Enterprise Cyber Security & System Audits" data-price="4500" data-old-price="6000">
+                            <i class="fas fa-user-shield course-icon"></i>
+                            <h4>12. Enterprise Cyber Security & Systems Auditing</h4>
+                            <p>Authorized vulnerability testing, network access controls, threat mitigation, and compliance frameworks.</p>
+                            <div class="course-price-container">
+                                <span class="old-price">6,000 ETB</span>
+                                <span class="new-price">4,500 ETB</span>
+                            </div>
+                        </label>
+                    </div>
+                </div>
+
+                <!-- REGISTRATION & DYNAMIC CALCULATION FORM -->
+                <div class="registration-panel">
+                    <h3><i class="fas fa-calculator"></i> Student Registration & Direct Telegram Order</h3>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="student-count">Number of Enrolled Trainees</label>
+                            <select id="student-count" onchange="calculateCourseTotal()">
+                                <option value="1">1 Trainee (Standard Discount)</option>
+                                <option value="2">2 Trainees (Extra 5% Discount)</option>
+                                <option value="5">5 Trainees (Extra 10% Discount)</option>
+                                <option value="10">10+ Trainees (Extra 15% Corporate Discount)</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="preferred-schedule">Preferred Learning Schedule</label>
+                            <select id="preferred-schedule">
+                                <option value="Weekend Evening">Weekend Evening (Online)</option>
+                                <option value="Weekday Night">Weekday Night (Online)</option>
+                                <option value="Self-Paced Recorded">Self-Paced Recorded + Mentorship</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="student-name">Full Name</label>
+                            <input type="text" id="student-name" placeholder="e.g. Yaikob Tesgera" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="student-phone">Phone Number / Telegram</label>
+                            <input type="tel" id="student-phone" placeholder="0912345678" required>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="student-email">Email Address</label>
+                        <input type="email" id="student-email" placeholder="name@example.com" required>
+                    </div>
+
+                    <!-- DYNAMIC PRICE SUMMARY -->
+                    <div class="price-summary-box">
+                        <div class="summary-details">
+                            <p>Selected Course: <strong id="summary-course-title">Computer Fundamentals & IT Basics</strong></p>
+                            <p>Calculated Total Investment:</p>
+                        </div>
+                        <div class="total-price-wrapper">
+                            <span id="estimated-old-cost" class="summary-old-price">1,600 ETB</span>
+                            <h2 id="estimated-cost">1,200 ETB</h2>
+                        </div>
+                        <small>*Submitting opens Telegram directly addressed to @jabaakeessan with pre-formatted registration text.</small>
+                    </div>
+
+                    <button type="button" onclick="submitCourseRegistration()" class="btn btn-primary btn-full btn-telegram">
+                        <i class="fab fa-telegram-plane"></i> Register & Send directly to @jabaakeessan
+                    </button>
+                    <div id="registration-status" class="status-message"></div>
+                </div>
+
+            </form>
+        </div>
+    </section>
+
+    <!-- CONTACT SECTION -->
+    <section class="section" id="contact">
+        <div class="section-title">
+            <p>GET IN TOUCH</p>
+            <h2>Connect With <span>Jabaa Enterprise</span></h2>
+        </div>
+        <div class="contact-wrapper">
+            <div class="contact-info glass-card">
+                <h3>Direct Communication</h3>
+                <p>Have questions regarding enterprise deployments, network installation, digital ad strategy, or course enrollment?</p>
+                
+                <div class="contact-detail">
+                    <i class="fas fa-envelope"></i>
+                    <div>
+                        <strong>Email Us</strong>
+                        <p>info@jabaaenterprise.com</p>
+                    </div>
+                </div>
+
+                <div class="contact-detail">
+                    <i class="fab fa-telegram"></i>
+                    <div>
+                        <strong>Official Telegram Channel</strong>
+                        <p>@JabaaPioneer</p>
+                    </div>
+                </div>
+
+                <div class="contact-detail">
+                    <i class="fas fa-location-dot"></i>
+                    <div>
+                        <strong>Headquarters</strong>
+                        <p>Addis Ababa, Ethiopia</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="contact-form-card glass-card">
+                <form id="jabaa-contact-form" onsubmit="event.preventDefault(); handleContactSubmit();">
+                    <div class="form-group">
+                        <label for="c-name">Your Full Name</label>
+                        <input type="text" id="c-name" required placeholder="Enter full name">
+                    </div>
+                    <div class="form-group">
+                        <label for="c-email">Email Address</label>
+                        <input type="email" id="c-email" required placeholder="name@company.com">
+                    </div>
+                    <div class="form-group">
+                        <label for="c-message">Inquiry / Project Details</label>
+                        <textarea id="c-message" rows="4" required placeholder="Write your message here..."></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-full">Send Message <i class="fas fa-paper-plane"></i></button>
+                    <div id="c-status" class="status-message"></div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-brand">
+                <a href="index.html" class="logo">
+                    <img src="images/Pioneering.jpg" alt="Footer Logo" class="company-logo-img">
+                    JABAA <span>ENTERPRISE</span>
+                </a>
+                <p>Pioneering technological systems, digital media platforms, and high-impact skills development.</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© <span id="jabaa-year">2026</span> Jabaa Enterprise. Pioneered & Designed by <a href="../index.html">Yaikob Tesgera</a>. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <!-- LIVE PORTFOLIO MODAL POPUP -->
+    <div class="modal-overlay" id="portfolio-modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3><i class="fas fa-user-code"></i> Developer Portfolio Preview</h3>
+                <span class="close-modal" onclick="closePortfolioModal()">&times;</span>
+            </div>
+            <div class="modal-body">
+                <iframe src="../index.html" id="portfolio-frame"></iframe>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
